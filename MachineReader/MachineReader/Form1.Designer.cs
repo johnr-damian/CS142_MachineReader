@@ -67,6 +67,7 @@
             this.txtInputMachine = new System.Windows.Forms.TextBox();
             this.lblInputMachine = new System.Windows.Forms.Label();
             this.spcConsole = new System.Windows.Forms.SplitContainer();
+            this.lbl_result = new System.Windows.Forms.Label();
             this.txtResultConsole = new System.Windows.Forms.TextBox();
             this.txtLogConsole = new System.Windows.Forms.TextBox();
             this.spcSimulate = new System.Windows.Forms.SplitContainer();
@@ -75,7 +76,6 @@
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
             this.sfdMain = new System.Windows.Forms.SaveFileDialog();
             this.tm_Progress = new System.Windows.Forms.Timer(this.components);
-            this.lbl_result = new System.Windows.Forms.Label();
             this.mnuMain.SuspendLayout();
             this.stsMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcMain)).BeginInit();
@@ -124,7 +124,7 @@
             // stsmImportMachine
             // 
             this.stsmImportMachine.Name = "stsmImportMachine";
-            this.stsmImportMachine.Size = new System.Drawing.Size(159, 22);
+            this.stsmImportMachine.Size = new System.Drawing.Size(180, 22);
             this.stsmImportMachine.Text = "Import &Machine";
             this.stsmImportMachine.Click += new System.EventHandler(this.ImportMachine);
             // 
@@ -132,19 +132,19 @@
             // 
             this.stsmExportMachine.Enabled = false;
             this.stsmExportMachine.Name = "stsmExportMachine";
-            this.stsmExportMachine.Size = new System.Drawing.Size(159, 22);
+            this.stsmExportMachine.Size = new System.Drawing.Size(180, 22);
             this.stsmExportMachine.Text = "Export &Machine";
             this.stsmExportMachine.Click += new System.EventHandler(this.ExportMachine);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(156, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // stsmExit
             // 
             this.stsmExit.Name = "stsmExit";
-            this.stsmExit.Size = new System.Drawing.Size(159, 22);
+            this.stsmExit.Size = new System.Drawing.Size(180, 22);
             this.stsmExit.Text = "E&xit";
             this.stsmExit.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -161,7 +161,7 @@
             // 
             this.stsmChangeMachine.Enabled = false;
             this.stsmChangeMachine.Name = "stsmChangeMachine";
-            this.stsmChangeMachine.Size = new System.Drawing.Size(164, 22);
+            this.stsmChangeMachine.Size = new System.Drawing.Size(180, 22);
             this.stsmChangeMachine.Text = "Change &Machine";
             this.stsmChangeMachine.Click += new System.EventHandler(this.ChangeMachine);
             // 
@@ -169,7 +169,7 @@
             // 
             this.stsmChangeString.Enabled = false;
             this.stsmChangeString.Name = "stsmChangeString";
-            this.stsmChangeString.Size = new System.Drawing.Size(164, 22);
+            this.stsmChangeString.Size = new System.Drawing.Size(180, 22);
             this.stsmChangeString.Text = "Change &String";
             this.stsmChangeString.Click += new System.EventHandler(this.ChangeString);
             // 
@@ -184,7 +184,7 @@
             // stsmMachine
             // 
             this.stsmMachine.Name = "stsmMachine";
-            this.stsmMachine.Size = new System.Drawing.Size(120, 22);
+            this.stsmMachine.Size = new System.Drawing.Size(180, 22);
             this.stsmMachine.Text = "&Machine";
             this.stsmMachine.Click += new System.EventHandler(this.ViewMachine);
             // 
@@ -503,6 +503,17 @@
             this.spcConsole.SplitterWidth = 3;
             this.spcConsole.TabIndex = 1;
             // 
+            // lbl_result
+            // 
+            this.lbl_result.AutoSize = true;
+            this.lbl_result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lbl_result.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_result.Location = new System.Drawing.Point(39, 3);
+            this.lbl_result.Name = "lbl_result";
+            this.lbl_result.Size = new System.Drawing.Size(35, 13);
+            this.lbl_result.TabIndex = 1;
+            this.lbl_result.Text = "label1";
+            // 
             // txtResultConsole
             // 
             this.txtResultConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -585,17 +596,6 @@
             // tm_Progress
             // 
             this.tm_Progress.Tick += new System.EventHandler(this.UpdateProgress);
-            // 
-            // lbl_result
-            // 
-            this.lbl_result.AutoSize = true;
-            this.lbl_result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lbl_result.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_result.Location = new System.Drawing.Point(39, 3);
-            this.lbl_result.Name = "lbl_result";
-            this.lbl_result.Size = new System.Drawing.Size(35, 13);
-            this.lbl_result.TabIndex = 1;
-            this.lbl_result.Text = "label1";
             // 
             // frmMain
             // 
