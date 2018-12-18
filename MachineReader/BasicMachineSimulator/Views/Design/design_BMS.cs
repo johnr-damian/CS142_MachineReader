@@ -62,5 +62,38 @@ namespace BasicMachineSimulator.Views.Design
 
         }
         #endregion
+
+        private void btnValidateDetails_Click(object sender, EventArgs e)
+        {
+            bool has_language = true, has_description = true, has_author = true;
+
+            if (String.IsNullOrEmpty(txtLanguage.Text) || String.IsNullOrWhiteSpace(txtLanguage.Text))
+                has_language = false;
+            if (String.IsNullOrEmpty(txtDescription.Text) || String.IsNullOrWhiteSpace(txtDescription.Text))
+                has_description = false;
+            if (String.IsNullOrEmpty(txtAuthor.Text) || String.IsNullOrWhiteSpace(txtAuthor.Text))
+                has_author = false;
+
+            if ((has_language && has_description) && has_author)
+            {
+                grpTuple.Enabled = true;
+                grpDetails.Enabled = false;
+            }
+        }
+
+        private void btnDefineTuple_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDefineRules_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnValidateTuple_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

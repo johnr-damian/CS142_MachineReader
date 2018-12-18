@@ -66,6 +66,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Machine\MachineTuple.cs" />
+    <Compile Include="App_Code\Machine\TransitionTable.cs" />
+    <Compile Include="App_Code\Machine\TransitionTableRule.cs" />
     <Compile Include="App_Code\Machine\TuringMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
