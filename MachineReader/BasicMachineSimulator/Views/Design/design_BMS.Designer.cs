@@ -113,6 +113,18 @@ namespace BasicMachineSimulator.Views.Design
             this.tsc_Main = new System.Windows.Forms.ToolStripContainer();
             this.spc_Main = new System.Windows.Forms.SplitContainer();
             this.pnlDescription = new System.Windows.Forms.Panel();
+            this.grpTuple = new System.Windows.Forms.GroupBox();
+            this.btnValidateTuple = new System.Windows.Forms.Button();
+            this.btnDefineRules = new System.Windows.Forms.Button();
+            this.btnDefineTuple = new System.Windows.Forms.Button();
+            this.grpDetails = new System.Windows.Forms.GroupBox();
+            this.btnValidateDetails = new System.Windows.Forms.Button();
+            this.txtAuthor = new System.Windows.Forms.TextBox();
+            this.lblAuthor = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.txtLanguage = new System.Windows.Forms.TextBox();
+            this.lblLanguage = new System.Windows.Forms.Label();
             this.pnlCanvas = new System.Windows.Forms.Panel();
             this.ts_Main = new System.Windows.Forms.ToolStrip();
             this.tsb_CreateState = new System.Windows.Forms.ToolStripButton();
@@ -120,18 +132,6 @@ namespace BasicMachineSimulator.Views.Design
             this.ts_sp1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsb_DeleteState = new System.Windows.Forms.ToolStripButton();
             this.tsb_DeleteTransition = new System.Windows.Forms.ToolStripButton();
-            this.grpDetails = new System.Windows.Forms.GroupBox();
-            this.lblLanguage = new System.Windows.Forms.Label();
-            this.txtLanguage = new System.Windows.Forms.TextBox();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.lblAuthor = new System.Windows.Forms.Label();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.btnValidateDetails = new System.Windows.Forms.Button();
-            this.grpTuple = new System.Windows.Forms.GroupBox();
-            this.btnDefineTuple = new System.Windows.Forms.Button();
-            this.btnDefineRules = new System.Windows.Forms.Button();
-            this.btnValidateTuple = new System.Windows.Forms.Button();
             this.tsc_Main.ContentPanel.SuspendLayout();
             this.tsc_Main.TopToolStripPanel.SuspendLayout();
             this.tsc_Main.SuspendLayout();
@@ -140,9 +140,9 @@ namespace BasicMachineSimulator.Views.Design
             this.spc_Main.Panel2.SuspendLayout();
             this.spc_Main.SuspendLayout();
             this.pnlDescription.SuspendLayout();
-            this.ts_Main.SuspendLayout();
-            this.grpDetails.SuspendLayout();
             this.grpTuple.SuspendLayout();
+            this.grpDetails.SuspendLayout();
+            this.ts_Main.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsc_Main
@@ -209,6 +209,128 @@ namespace BasicMachineSimulator.Views.Design
             this.pnlDescription.Size = new System.Drawing.Size(184, 378);
             this.pnlDescription.TabIndex = 0;
             // 
+            // grpTuple
+            // 
+            this.grpTuple.Controls.Add(this.btnValidateTuple);
+            this.grpTuple.Controls.Add(this.btnDefineRules);
+            this.grpTuple.Controls.Add(this.btnDefineTuple);
+            this.grpTuple.Enabled = false;
+            this.grpTuple.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpTuple.Location = new System.Drawing.Point(6, 268);
+            this.grpTuple.Name = "grpTuple";
+            this.grpTuple.Size = new System.Drawing.Size(175, 107);
+            this.grpTuple.TabIndex = 1;
+            this.grpTuple.TabStop = false;
+            this.grpTuple.Text = "Tuple:";
+            // 
+            // btnValidateTuple
+            // 
+            this.btnValidateTuple.Enabled = false;
+            this.btnValidateTuple.Location = new System.Drawing.Point(57, 79);
+            this.btnValidateTuple.Name = "btnValidateTuple";
+            this.btnValidateTuple.Size = new System.Drawing.Size(112, 23);
+            this.btnValidateTuple.TabIndex = 2;
+            this.btnValidateTuple.Text = "Validate";
+            this.btnValidateTuple.UseVisualStyleBackColor = true;
+            this.btnValidateTuple.Click += new System.EventHandler(this.btnValidateTuple_Click);
+            // 
+            // btnDefineRules
+            // 
+            this.btnDefineRules.Enabled = false;
+            this.btnDefineRules.Location = new System.Drawing.Point(6, 50);
+            this.btnDefineRules.Name = "btnDefineRules";
+            this.btnDefineRules.Size = new System.Drawing.Size(163, 23);
+            this.btnDefineRules.TabIndex = 1;
+            this.btnDefineRules.Text = "Define Rules";
+            this.btnDefineRules.UseVisualStyleBackColor = true;
+            this.btnDefineRules.Click += new System.EventHandler(this.btnDefineRules_Click);
+            // 
+            // btnDefineTuple
+            // 
+            this.btnDefineTuple.Location = new System.Drawing.Point(6, 21);
+            this.btnDefineTuple.Name = "btnDefineTuple";
+            this.btnDefineTuple.Size = new System.Drawing.Size(163, 23);
+            this.btnDefineTuple.TabIndex = 0;
+            this.btnDefineTuple.Text = "Define Tuple";
+            this.btnDefineTuple.UseVisualStyleBackColor = true;
+            this.btnDefineTuple.Click += new System.EventHandler(this.btnDefineTuple_Click);
+            // 
+            // grpDetails
+            // 
+            this.grpDetails.Controls.Add(this.btnValidateDetails);
+            this.grpDetails.Controls.Add(this.txtAuthor);
+            this.grpDetails.Controls.Add(this.lblAuthor);
+            this.grpDetails.Controls.Add(this.txtDescription);
+            this.grpDetails.Controls.Add(this.lblDescription);
+            this.grpDetails.Controls.Add(this.txtLanguage);
+            this.grpDetails.Controls.Add(this.lblLanguage);
+            this.grpDetails.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDetails.Location = new System.Drawing.Point(6, 3);
+            this.grpDetails.Name = "grpDetails";
+            this.grpDetails.Size = new System.Drawing.Size(175, 259);
+            this.grpDetails.TabIndex = 0;
+            this.grpDetails.TabStop = false;
+            this.grpDetails.Text = "Details:";
+            // 
+            // btnValidateDetails
+            // 
+            this.btnValidateDetails.Location = new System.Drawing.Point(57, 230);
+            this.btnValidateDetails.Name = "btnValidateDetails";
+            this.btnValidateDetails.Size = new System.Drawing.Size(112, 23);
+            this.btnValidateDetails.TabIndex = 6;
+            this.btnValidateDetails.Text = "Validate";
+            this.btnValidateDetails.UseVisualStyleBackColor = true;
+            this.btnValidateDetails.Click += new System.EventHandler(this.btnValidateDetails_Click);
+            // 
+            // txtAuthor
+            // 
+            this.txtAuthor.Location = new System.Drawing.Point(9, 188);
+            this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.Size = new System.Drawing.Size(160, 22);
+            this.txtAuthor.TabIndex = 5;
+            // 
+            // lblAuthor
+            // 
+            this.lblAuthor.AutoSize = true;
+            this.lblAuthor.Location = new System.Drawing.Point(6, 171);
+            this.lblAuthor.Name = "lblAuthor";
+            this.lblAuthor.Size = new System.Drawing.Size(46, 14);
+            this.lblAuthor.TabIndex = 4;
+            this.lblAuthor.Text = "Author:";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(9, 77);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(160, 91);
+            this.txtDescription.TabIndex = 3;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(6, 60);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(72, 14);
+            this.lblDescription.TabIndex = 2;
+            this.lblDescription.Text = "Description:";
+            // 
+            // txtLanguage
+            // 
+            this.txtLanguage.Location = new System.Drawing.Point(9, 35);
+            this.txtLanguage.Name = "txtLanguage";
+            this.txtLanguage.Size = new System.Drawing.Size(160, 22);
+            this.txtLanguage.TabIndex = 1;
+            // 
+            // lblLanguage
+            // 
+            this.lblLanguage.AutoSize = true;
+            this.lblLanguage.Location = new System.Drawing.Point(6, 18);
+            this.lblLanguage.Name = "lblLanguage";
+            this.lblLanguage.Size = new System.Drawing.Size(112, 14);
+            this.lblLanguage.TabIndex = 0;
+            this.lblLanguage.Text = "Machine Language:";
+            // 
             // pnlCanvas
             // 
             this.pnlCanvas.BackColor = System.Drawing.Color.Linen;
@@ -217,6 +339,7 @@ namespace BasicMachineSimulator.Views.Design
             this.pnlCanvas.Name = "pnlCanvas";
             this.pnlCanvas.Size = new System.Drawing.Size(522, 378);
             this.pnlCanvas.TabIndex = 0;
+            this.pnlCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCanvas_Paint);
             // 
             // ts_Main
             // 
@@ -276,126 +399,6 @@ namespace BasicMachineSimulator.Views.Design
             this.tsb_DeleteTransition.Size = new System.Drawing.Size(121, 22);
             this.tsb_DeleteTransition.Text = "Delete Transition";
             // 
-            // grpDetails
-            // 
-            this.grpDetails.Controls.Add(this.btnValidateDetails);
-            this.grpDetails.Controls.Add(this.txtAuthor);
-            this.grpDetails.Controls.Add(this.lblAuthor);
-            this.grpDetails.Controls.Add(this.txtDescription);
-            this.grpDetails.Controls.Add(this.lblDescription);
-            this.grpDetails.Controls.Add(this.txtLanguage);
-            this.grpDetails.Controls.Add(this.lblLanguage);
-            this.grpDetails.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDetails.Location = new System.Drawing.Point(6, 3);
-            this.grpDetails.Name = "grpDetails";
-            this.grpDetails.Size = new System.Drawing.Size(175, 259);
-            this.grpDetails.TabIndex = 0;
-            this.grpDetails.TabStop = false;
-            this.grpDetails.Text = "Details:";
-            // 
-            // lblLanguage
-            // 
-            this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(6, 18);
-            this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(112, 14);
-            this.lblLanguage.TabIndex = 0;
-            this.lblLanguage.Text = "Machine Language:";
-            // 
-            // txtLanguage
-            // 
-            this.txtLanguage.Location = new System.Drawing.Point(9, 35);
-            this.txtLanguage.Name = "txtLanguage";
-            this.txtLanguage.Size = new System.Drawing.Size(160, 22);
-            this.txtLanguage.TabIndex = 1;
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(6, 60);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(72, 14);
-            this.lblDescription.TabIndex = 2;
-            this.lblDescription.Text = "Description:";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(9, 77);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(160, 91);
-            this.txtDescription.TabIndex = 3;
-            // 
-            // lblAuthor
-            // 
-            this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(6, 171);
-            this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(46, 14);
-            this.lblAuthor.TabIndex = 4;
-            this.lblAuthor.Text = "Author:";
-            // 
-            // txtAuthor
-            // 
-            this.txtAuthor.Location = new System.Drawing.Point(9, 188);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(160, 22);
-            this.txtAuthor.TabIndex = 5;
-            // 
-            // btnValidateDetails
-            // 
-            this.btnValidateDetails.Location = new System.Drawing.Point(57, 230);
-            this.btnValidateDetails.Name = "btnValidateDetails";
-            this.btnValidateDetails.Size = new System.Drawing.Size(112, 23);
-            this.btnValidateDetails.TabIndex = 6;
-            this.btnValidateDetails.Text = "Validate";
-            this.btnValidateDetails.UseVisualStyleBackColor = true;
-            this.btnValidateDetails.Click += new System.EventHandler(this.btnValidateDetails_Click);
-            // 
-            // grpTuple
-            // 
-            this.grpTuple.Controls.Add(this.btnValidateTuple);
-            this.grpTuple.Controls.Add(this.btnDefineRules);
-            this.grpTuple.Controls.Add(this.btnDefineTuple);
-            this.grpTuple.Enabled = false;
-            this.grpTuple.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpTuple.Location = new System.Drawing.Point(6, 268);
-            this.grpTuple.Name = "grpTuple";
-            this.grpTuple.Size = new System.Drawing.Size(175, 107);
-            this.grpTuple.TabIndex = 1;
-            this.grpTuple.TabStop = false;
-            this.grpTuple.Text = "Tuple:";
-            // 
-            // btnDefineTuple
-            // 
-            this.btnDefineTuple.Location = new System.Drawing.Point(6, 21);
-            this.btnDefineTuple.Name = "btnDefineTuple";
-            this.btnDefineTuple.Size = new System.Drawing.Size(163, 23);
-            this.btnDefineTuple.TabIndex = 0;
-            this.btnDefineTuple.Text = "Define Tuple";
-            this.btnDefineTuple.UseVisualStyleBackColor = true;
-            this.btnDefineTuple.Click += new System.EventHandler(this.btnDefineTuple_Click);
-            // 
-            // btnDefineRules
-            // 
-            this.btnDefineRules.Location = new System.Drawing.Point(6, 50);
-            this.btnDefineRules.Name = "btnDefineRules";
-            this.btnDefineRules.Size = new System.Drawing.Size(163, 23);
-            this.btnDefineRules.TabIndex = 1;
-            this.btnDefineRules.Text = "Define Rules";
-            this.btnDefineRules.UseVisualStyleBackColor = true;
-            this.btnDefineRules.Click += new System.EventHandler(this.btnDefineRules_Click);
-            // 
-            // btnValidateTuple
-            // 
-            this.btnValidateTuple.Location = new System.Drawing.Point(57, 79);
-            this.btnValidateTuple.Name = "btnValidateTuple";
-            this.btnValidateTuple.Size = new System.Drawing.Size(112, 23);
-            this.btnValidateTuple.TabIndex = 2;
-            this.btnValidateTuple.Text = "Validate";
-            this.btnValidateTuple.UseVisualStyleBackColor = true;
-            this.btnValidateTuple.Click += new System.EventHandler(this.btnValidateTuple_Click);
-            // 
             // design_BMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,11 +416,11 @@ namespace BasicMachineSimulator.Views.Design
             ((System.ComponentModel.ISupportInitialize)(this.spc_Main)).EndInit();
             this.spc_Main.ResumeLayout(false);
             this.pnlDescription.ResumeLayout(false);
-            this.ts_Main.ResumeLayout(false);
-            this.ts_Main.PerformLayout();
+            this.grpTuple.ResumeLayout(false);
             this.grpDetails.ResumeLayout(false);
             this.grpDetails.PerformLayout();
-            this.grpTuple.ResumeLayout(false);
+            this.ts_Main.ResumeLayout(false);
+            this.ts_Main.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

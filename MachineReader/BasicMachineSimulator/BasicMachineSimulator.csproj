@@ -66,6 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Components\Header.cs" />
+    <Compile Include="App_Code\Components\StateComponent.cs" />
+    <Compile Include="App_Code\Components\TapeComponent.cs" />
+    <Compile Include="App_Code\Components\template_Component.cs" />
+    <Compile Include="App_Code\Components\TransitionComponent.cs" />
     <Compile Include="App_Code\Machine\MachineTuple.cs" />
     <Compile Include="App_Code\Machine\TransitionTable.cs" />
     <Compile Include="App_Code\Machine\TransitionTableRule.cs" />
@@ -84,6 +89,12 @@
     <Compile Include="Views\Design\design_BMS.Designer.cs">
       <DependentUpon>design_BMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\RuleForm\form_Rule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RuleForm\form_Rule.Designer.cs">
+      <DependentUpon>form_Rule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Simulate\simulate_BMS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +106,12 @@
     </Compile>
     <Compile Include="Views\Title\title_BMS.Designer.cs">
       <DependentUpon>title_BMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TupleForm\form_Tuple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TupleForm\form_Tuple.Designer.cs">
+      <DependentUpon>form_Tuple.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,8 +128,14 @@
     <EmbeddedResource Include="Views\Design\design_BMS.resx">
       <DependentUpon>design_BMS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\RuleForm\form_Rule.resx">
+      <DependentUpon>form_Rule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Title\title_BMS.resx">
       <DependentUpon>title_BMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TupleForm\form_Tuple.resx">
+      <DependentUpon>form_Tuple.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,9 +150,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Code\Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7">
       <Visible>False</Visible>
